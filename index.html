@@ -3,10 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Food Recommendation System</title>
+    <link rel="stylesheet" href="frontend/src/css/styles.css" />
   </head>
   <body>
-    <!-- javascript -->
-    <script src="./frontend/src/components/js/home.js"></script>
+    <header>
+      <h1>Food Recommendation System</h1>
+    </header>
+    <main>
+      <form method="POST" action="/">
+        <label for="ingredients">Enter ingredients (comma-separated):</label>
+        <input
+          type="text"
+          id="ingredients"
+          name="ingredients"
+          placeholder="e.g., chicken, rice"
+        />
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <div id="recommendations">
+        {% if recommended_dishes %}
+        <h2>Recommended Dishes:</h2>
+        <ul>
+          {% for dish in recommended_dishes %}
+          <li>
+            <strong>{{ dish }}</strong>
+            <ul>
+              <li>Calories: {{ nutrition_info[dish]['Calories'] }}</li>
+              <li>Protein: {{ nutrition_info[dish]['Protein'] }}</li>
+              <li>Fat: {{ nutrition_info[dish]['Fat'] }}</li>
+              <li>
+                Carbohydrates: {{ nutrition_info[dish]['Carbohydrates'] }}
+              </li>
+            </ul>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No recommendations available. Try different ingredients.</p>
+        {% endif %}
+      </div>
+    </main>
+    <!-- Javascript -->
+    <script src="frontend/src/js/script.js"></script>
   </body>
 </html>
