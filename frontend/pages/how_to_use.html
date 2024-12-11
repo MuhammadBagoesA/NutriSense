@@ -22,7 +22,7 @@
             <!-- Mobile menu button-->
             <button
               type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-emerald-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -88,23 +88,23 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
                   href="#"
-                  class="rounded-md bg-emerald-600 px-3 py-2 text-sm font-medium text-white"
+                  class="rounded-md bg-green-400 px-3 py-2 text-sm font-medium text-white"
                   aria-current="page"
                   >Dashboard</a
                 >
                 <a
                   href="../../frontend/pages/content.html"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >Content</a
                 >
                 <a
                   href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >About</a
                 >
                 <a
                   href="../../frontend/pages/how_to_use.html"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >How to Use</a
                 >
               </div>
@@ -116,7 +116,7 @@
           >
             <button
               type="button"
-              class="relative rounded-full bg-emerald-600 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span class="absolute -inset-1.5"></span>
               <span class="sr-only">View notifications</span>
@@ -226,26 +226,26 @@ document.addEventListener("click", function (event) {
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-emerald-600 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <!-- Current: "bg-green-400 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
             href="#"
-            class="block rounded-md bg-emerald-600 px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-green-400 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >Dashboard</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
             >Content</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
             >Contact</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
             >How to Use</a
           >
         </div>
@@ -259,11 +259,50 @@ document.addEventListener("click", function (event) {
       <div class="p-5">
         <img src="../../Assets/Image/product_banner.png" alt="product banner">
       </div>
-      <div class="p-4">
+      <div class="p-1 text-center">
         <h2 class="text-lg font-semibold">Category</h2>
-    <hr class="mt-2 border-emerald-500">
+    <hr class="mt-1 border-emerald-500">
       </div>
      </div>
+     <!-- Category -->
+     <div class="relative w-full overflow-hidden">
+      <!-- Tombol Navigasi Kiri -->
+      <button
+        id="prev"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 rounded-full p-2 focus:outline-none z-10"
+      >
+        &#8592;
+      </button>
+  
+      <!-- Container Slider -->
+      <div id="category" class="flex transition-transform duration-300">
+        <a href="/category1" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="../../Assets/Image/Categories (7).png" alt="Category 1" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category2" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="../../Assets/Image/Categories (3).png" alt="Category 2" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category3" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="../../Assets/Image/Categories (4).png" alt="Category 3" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category4" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="../../Assets/Image/Categories (5).png" alt="Category 4" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category5" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="../../Assets/Image/Categories (6).png" alt="Category 5" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+      </div>
+  
+      <!-- Tombol Navigasi Kanan -->
+      <button
+        id="next"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 rounded-full p-2 focus:outline-none z-10"
+      >
+        &#8594;
+      </button>
+    </div>
     <!-- End Main -->
+     <!-- JS -->
+      <script src="../src/js/category.js"></script>
   </body>
 </html>
