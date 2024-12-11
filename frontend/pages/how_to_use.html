@@ -21,7 +21,7 @@
             <!-- Mobile menu button-->
             <button
               type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-emerald-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -102,13 +102,14 @@
                   >Projects</a
                 >
                 <a
-                  href="#"
+                  href="../../frontend/pages/how_to_use.html"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
                   >How to Use</a
                 >
               </div>
             </div>
           </div>
+          <!-- Start Button Notifications -->
           <div
             class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
           >
@@ -127,6 +128,7 @@
                 aria-hidden="true"
                 data-slot="icon"
               >
+                <!-- logo notifications -->
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -144,6 +146,7 @@
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
+                  onclick="toggleDropdown()"
                 >
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
@@ -154,79 +157,95 @@
                   />
                 </button>
               </div>
+              <!-- End button notifications -->
+              <!-- Dropdown menu when clik -->
+  <div
+  id="dropdown"
+  class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
+  role="menu"
+  aria-orientation="vertical"
+  aria-labelledby="user-menu-button"
+  tabindex="-1"
+>
+  <div class="py-1" role="none">
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-0"
+    >
+      Your Profile
+    </a>
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-1"
+    >
+      Setting
+    </a>
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-2"
+    >
+      Sign Out
+    </a>
+  </div>
+</div>
+</div>
 
-              <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-              <div
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabindex="-1"
-              >
-                <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-0"
-                  >Your Profile</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-1"
-                  >Settings</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-2"
-                  >Sign out</a
-                >
-              </div>
+<script>
+const toggleDropdown = () => {
+  const dropdown = document.getElementById("dropdown");
+  dropdown.classList.toggle("hidden");
+};
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropdown");
+  const button = document.getElementById("user-menu-button");
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
+</script>
+              <!-- End Dropdown -->
             </div>
           </div>
         </div>
       </div>
+      <!-- End  -->
 
+      <!-- MOBILE GRID -->
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <!-- Current: "bg-emerald-600 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
             href="#"
-            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-emerald-600 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >Dashboard</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Team</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            >Content</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Projects</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            >Contact</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Calendar</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+            >How to Use</a
           >
         </div>
       </div>
