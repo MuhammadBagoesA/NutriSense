@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/Assets/Image/Icon/website_icon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Start Navbar-->
+    <!-- Start Navbar -->
     <nav class="bg-white-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -20,7 +22,7 @@
             <!-- Mobile menu button-->
             <button
               type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -73,10 +75,10 @@
           >
             <div class="flex shrink-0 items-center">
               <!-- logo navbar, wktu di klik akan kembali ke halaman utama(Index.html) -->
-              <a href="../../index.html" alt="Pointer to Homepage">
+              <a href="/index.html" alt="Pointer to Homepage">
                 <img
                   class="h-8 w-auto"
-                  src="../../Assets/Image/Icon/logo_nutrisense.png"
+                  src="/Assets/Image/Icon/logo_nutrisense.png"
                   alt="Your Company"
                 />
               </a>
@@ -86,34 +88,35 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
                   href="#"
-                  class="rounded-md bg-emerald-600 px-3 py-2 text-sm font-medium text-white"
+                  class="rounded-md bg-green-400 px-3 py-2 text-sm font-medium text-white"
                   aria-current="page"
                   >Dashboard</a
                 >
                 <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
-                  >Team</a
+                  href="/frontend/pages/content.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
+                  >Content</a
                 >
                 <a
                   href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
-                  >Projects</a
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
+                  >About</a
                 >
                 <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
+                  href="./frontend/pages/how_to_use.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >How to Use</a
                 >
               </div>
             </div>
           </div>
+          <!-- Start Button Notifications -->
           <div
             class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
           >
             <button
               type="button"
-              class="relative rounded-full bg-emerald-600 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              class="relative rounded-full bg-green-400 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span class="absolute -inset-1.5"></span>
               <span class="sr-only">View notifications</span>
@@ -126,6 +129,7 @@
                 aria-hidden="true"
                 data-slot="icon"
               >
+                <!-- logo notifications -->
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -143,115 +147,162 @@
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
+                  onclick="toggleDropdown()"
                 >
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
                   <img
                     class="size-8 rounded-full"
-                    src="../../Assets/Image/Icon/ren_rezero.jpg"
+                    src="/Assets/Image/Icon/ren_rezero.jpg"
                     alt="Profile Picture"
                   />
                 </button>
               </div>
+              <!-- End button notifications -->
+              <!-- Dropdown menu when clik -->
+  <div
+  id="dropdown"
+  class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
+  role="menu"
+  aria-orientation="vertical"
+  aria-labelledby="user-menu-button"
+  tabindex="-1"
+>
+  <div class="py-1" role="none">
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-0"
+    >
+      Your Profile
+    </a>
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-1"
+    >
+      Setting
+    </a>
+    <a
+      href="#"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      role="menuitem"
+      tabindex="-1"
+      id="menu-item-2"
+    >
+      Sign Out
+    </a>
+  </div>
+</div>
+</div>
 
-              <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-              <div
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabindex="-1"
-              >
-                <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-0"
-                  >Your Profile</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-1"
-                  >Settings</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-2"
-                  >Sign out</a
-                >
-              </div>
+<script>
+const toggleDropdown = () => {
+  const dropdown = document.getElementById("dropdown");
+  dropdown.classList.toggle("hidden");
+};
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+  const dropdown = document.getElementById("dropdown");
+  const button = document.getElementById("user-menu-button");
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add("hidden");
+  }
+});
+</script>
+              <!-- End Dropdown -->
             </div>
           </div>
         </div>
       </div>
+      <!-- End  -->
 
+      <!-- MOBILE GRID -->
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <!-- Current: "bg-green-400 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
             href="#"
-            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-green-400 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >Dashboard</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Team</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
+            >Content</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Projects</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
+            >Contact</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Calendar</a
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white"
+            >How to Use</a
           >
         </div>
       </div>
     </nav>
+
     <!-- End Navbar -->
 
-    <!-- JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 
-    You can also include Popper and our JS separately.
-    If you don’t plan to use dropdowns, popovers, or tooltips,
-    save some kilobytes by not including Popper.
-    -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Main Content -->
+     <div class="flex flex-col space-y-6">
+      <div class="p-5">
+        <img src="/Assets/Image/product_banner.png" alt="product banner">
+      </div>
+      <div class="p-1 text-center">
+        <h2 class="text-lg font-semibold">Category</h2>
+    <hr class="mt-1 border-emerald-500">
+      </div>
+     </div>
+     <!-- Category -->
+     <div class="relative w-full overflow-hidden">
+      <!-- Tombol Navigasi Kiri -->
+      <button
+        id="prev"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 rounded-full p-2 focus:outline-none z-10"
+      >
+        &#8592;
+      </button>
+  
+      <!-- Container Slider -->
+      <div id="category" class="flex transition-transform duration-300">
+        <a href="/category1" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="/Assets/Image/Categories (7).png" alt="Category 1" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category2" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="/Assets/Image/Categories (3).png" alt="Category 2" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category3" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="/Assets/Image/Categories (4).png" alt="Category 3" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category4" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="/Assets/Image/Categories (5).png" alt="Category 4" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+        <a href="/category5" class="min-w-[20%] flex-shrink-0 p-4">
+          <img src="/Assets/Image/Categories (6).png" alt="Category 5" class="w-full hover:outline hover:outline-4 hover:outline-green-500 ">
+        </a>
+      </div>
+  
+      <!-- Tombol Navigasi Kanan -->
+      <button
+        id="next"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 hover:bg-gray-400 rounded-full p-2 focus:outline-none z-10"
+      >
+        &#8594;
+      </button>
+    </div>
+    <!-- End Main -->
+     <!-- JS -->
+      <script src="../src/js/category.js"></script>
   </body>
 </html>
