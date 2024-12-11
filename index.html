@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../../Assets/Image/Icon/website_icon.ico">
+    <link rel="icon" type="image/x-icon" href="./Assets/Image/Icon/website_icon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+      scroll-behavior: smooth;
+    }
+    </style>
     <style type="text/tailwindcss">
       @layer utilities {
         .content-auto {
@@ -75,10 +80,11 @@
           >
             <div class="flex shrink-0 items-center">
               <!-- logo navbar, wktu di klik akan kembali ke halaman utama(Index.html) -->
-              <a href="../../index.html" alt="Pointer to Homepage">
+              <a href="./index.html" alt="Pointer to Homepage">
                 <img
+                id="logo_navbar"
                   class="h-8 w-auto"
-                  src="../../Assets/Image/Icon/logo_nutrisense.png"
+                  src="./Assets/Image/Icon/logo_nutrisense.png"
                   alt="Your Company"
                 />
               </a>
@@ -93,7 +99,7 @@
                   >Dashboard</a
                 >
                 <a
-                  href="../../frontend/pages/content.html"
+                  href="./frontend/pages/content.html"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >Content</a
                 >
@@ -103,7 +109,7 @@
                   >About</a
                 >
                 <a
-                  href="../../frontend/pages/how_to_use.html"
+                  href="./frontend/pages/how_to_use.html"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-green-400 hover:text-white"
                   >How to Use</a
                 >
@@ -153,7 +159,7 @@
                   <span class="sr-only">Open user menu</span>
                   <img
                     class="size-8 rounded-full"
-                    src="../../Assets/Image/Icon/ren_rezero.jpg"
+                    src="./Assets/Image/Icon/ren_rezero.jpg"
                     alt="Profile Picture"
                   />
                 </button>
@@ -257,7 +263,7 @@ document.addEventListener("click", function (event) {
     <!-- Main Content -->
      <div class="flex flex-col space-y-6">
       <div class="p-5">
-        <img src="../../Assets/Image/product_banner.png" alt="product banner">
+        <img src="./Assets/Image/product_banner.png" alt="product banner">
       </div>
       <div class="p-1 text-center">
         <h2 class="text-lg font-bold text-xl">Category</h2>
@@ -277,19 +283,19 @@ document.addEventListener("click", function (event) {
       <!-- Container Slider -->
       <div id="category" class="flex transition-transform duration-300 px-8">
         <a href="/category1" class="min-w-[20%] flex-shrink-0 p-4">
-          <img src="../../Assets/Image/Categories (7).png"width=40%  alt="Category 1" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
+          <img src="./Assets/Image/Categories (7).png"width=40%  alt="Category 1" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
         </a>
         <a href="/category2" class="min-w-[20%] flex-shrink-0 p-4">
-          <img src="../../Assets/Image/Categories (3).png" width=40% alt="Category 2" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
+          <img src="./Assets/Image/Categories (3).png" width=40% alt="Category 2" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
         </a>
         <a href="/category3" class="min-w-[20%] flex-shrink-0 p-4">
-          <img src="../../Assets/Image/Categories (4).png" width=40% alt="Category 3" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
+          <img src="./Assets/Image/Categories (4).png" width=40% alt="Category 3" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
         </a>
         <a href="/category4" class="min-w-[20%] flex-shrink-0 p-4">
-          <img src="../../Assets/Image/Categories (5).png" width=40% alt="Category 4" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
+          <img src="./Assets/Image/Categories (5).png" width=40% alt="Category 4" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
         </a>
         <a href="/category5" class="min-w-[20%] flex-shrink-0 p-4">
-          <img src="../../Assets/Image/Categories (6).png" width=40% alt="Category 5" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
+          <img src="./Assets/Image/Categories (6).png" width=40% alt="Category 5" class="w-full hover:outline hover:outline-2 hover:outline-green-500 ">
         </a>
       </div>
   
@@ -306,42 +312,42 @@ document.addEventListener("click", function (event) {
       <h2 class="text-center font-bold text-xl py-8">Nutrisense memberi Anda informasi yang paling dibutuhkan</h2>
       <div class="grid grid-cols-3 gap-4">
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
           </p>
         </div>
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
           </p>
         </div>
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
           </p>
         </div>
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
           </p>
         </div>
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
           </p>
         </div>
         <div class="... px-8 py-6 bg-gray-100 flex flex-col items-center">
-          <img src="../../Assets/location.gif" width="40%" alt="page articel">
+          <img src="./Assets/location.gif" width="40%" alt="page articel">
           <h2 class="text-center font-bold text-xl py-10">INFORMASI BERBASIS RISET</h2>
           <p>
             Nutrisense memberikan informasi berbasis riset yang dapat dipercaya dan mudah dipahami. berdasarkan riset terbaru dan terpercaya serta ditinjau oleh pakar terkemuka dari berbagai bidang.
@@ -368,29 +374,29 @@ document.addEventListener("click", function (event) {
       <!-- Card Section -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         <!-- Card 1 -->
-        <div class="bg-blue-50 rounded-lg shadow-lg p-6 text-center">
-          <img src="../../Assets/Image/Icon/ren_rezero.jpg" alt="Muhamad Fadhli Akbar" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+          <img src="./Assets/Image/Icon/ren_rezero.jpg" alt="Muhamad Fadhli Akbar" class="w-24 h-24 mx-auto rounded-full mb-4">
           <h3 class="font-bold text-lg">Muhamad Fadhli Akbar</h3>
           <p class="text-gray-600">Kesehatan anak • RS UNS Solo</p>
         </div>
     
         <!-- Card 2 -->
-        <div class="bg-blue-50 rounded-lg shadow-lg p-6 text-center">
-          <img src="../../Assets/Image/Icon/ren_rezero.jpg" alt="Bagus" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+          <img src="./Assets/Image/Icon/ren_rezero.jpg" alt="Bagus" class="w-24 h-24 mx-auto rounded-full mb-4">
           <h3 class="font-bold text-lg">Bagus</h3>
           <p class="text-gray-600">Spesialis Kedokteran Olahraga • Klinik Utama Medifit</p>
         </div>
     
         <!-- Card 3 -->
-        <div class="bg-blue-50 rounded-lg shadow-lg p-6 text-center">
-          <img src="../../Assets/Image/Icon/ren_rezero.jpg" alt="Igfirli" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+          <img src="./Assets/Image/Icon/ren_rezero.jpg" alt="Igfirli" class="w-24 h-24 mx-auto rounded-full mb-4">
           <h3 class="font-bold text-lg">Igfirli</h3>
           <p class="text-gray-600">Spesialis Mata • RS Mata Jakarta</p>
         </div>
     
         <!-- Card 4 -->
-        <div class="bg-blue-50 rounded-lg shadow-lg p-6 text-center">
-          <img src="../../Assets/Image/Icon/ren_rezero.jpg" alt="Afif" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+          <img src="./Assets/Image/Icon/ren_rezero.jpg" alt="Afif" class="w-24 h-24 mx-auto rounded-full mb-4">
           <h3 class="font-bold text-lg">Afif</h3>
           <p class="text-gray-600">Spesialis Kandungan • RS Ibu dan Anak</p>
         </div>
@@ -399,16 +405,12 @@ document.addEventListener("click", function (event) {
      <!-- End About Nutrisense -->
      
      <!-- Footer -->
-     <footer class="px-4 divide-y dark:bg-gray-100 dark:text-gray-800">
+     <footer class="px-4 divide-y dark:bg-green-100 dark:text-gray-800">
       <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div class="lg:w-1/3">
-          <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
-            <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50">
-                <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-              </svg>
-            </div>
-            <span class="self-center text-2xl font-semibold">Brand name</span>
+          <a rel="noopener noreferrer" href="#logo_navbar" class="flex justify-center space-x-3 lg:justify-start">
+              <img src="./Assets/Image/leap_website.png" width="10%" alt="logo's website">
+            <span class="self-center text-3xl font-semibold">Nutrisense</span>
           </a>
         </div>
         <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -476,7 +478,7 @@ document.addEventListener("click", function (event) {
           </div>
         </div>
       </div>
-      <div class="py-6 text-sm text-center dark:text-gray-600">© 1968 Company Co. All rights reserved.</div>
+      <div class="py-6 text-sm text-center dark:text-gray-600">© 2024 Company Artificial Intelligence Center Indonesia. All rights reserved.</div>
     </footer>
       <!-- End Footer -->
     
