@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../Assets/Image/Icon/website_icon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer utilities {
@@ -92,14 +93,14 @@
                   >Dashboard</a
                 >
                 <a
-                  href="#"
+                  href="../../frontend/pages/content.html"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
-                  >Team</a
+                  >Content</a
                 >
                 <a
                   href="#"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-emerald-600 hover:text-white"
-                  >Projects</a
+                  >About</a
                 >
                 <a
                   href="../../frontend/pages/how_to_use.html"
@@ -252,5 +253,17 @@ document.addEventListener("click", function (event) {
     </nav>
 
     <!-- End Navbar -->
+
+    <!-- Main Content -->
+     <div class="flex flex-col space-y-6">
+      <div class="p-5">
+        <img src="../../Assets/Image/product_banner.png" alt="product banner">
+      </div>
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Category</h2>
+    <hr class="mt-2 border-emerald-500">
+      </div>
+     </div>
+    <!-- End Main -->
   </body>
 </html>
